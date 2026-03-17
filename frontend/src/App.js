@@ -14,7 +14,7 @@ function App() {
   const [statusFilter, setStatusFilter] = useState("All");
 
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    const socket = io("https://cross-browser-test-visualizer.onrender.com");
 
     socket.on("resultsUpdate", (data) => {
       const rows = [];
