@@ -1,33 +1,40 @@
 # Cross-Browser Test Result Visualizer
 
-A real-time dashboard for visualizing Playwright cross-browser test results with analytics, charts, and failure diagnostics.
+A modern **QA analytics dashboard** that visualizes Playwright cross-browser test results in real-time.
 
-This project provides a **modern QA dashboard** where you can run Playwright tests, analyze results, and monitor performance across multiple browsers.
+This project combines **Playwright automation, Node.js backend, WebSockets, and a React dashboard** to provide a powerful test monitoring interface for developers and QA engineers.
+
+Users can run tests directly from the dashboard and instantly see analytics, browser comparisons, and execution trends.
 
 ---
 
 # Features
 
-Real-time test result visualization  
-Cross-browser analytics (Chromium, Firefox, WebKit)  
-Live WebSocket updates  
-Run Playwright tests directly from the dashboard  
-Execution trend charts  
-Failure diagnostics with screenshots  
+Real-time dashboard updates using WebSockets  
+Run Playwright tests directly from the UI  
+Cross-browser testing (Chromium, Firefox, WebKit)  
+Execution performance analytics  
+Visual charts and trend analysis  
+Summary cards for pass/fail statistics  
+Failure diagnostics with error logs  
+Screenshot preview for failed tests  
 Interactive filtering by browser and status  
-Modern UI dashboard with summary cards  
 
 ---
 
-# Dashboard Preview
+# Dashboard Screenshots
 
 ## Main Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
 
-## Execution Trend
+---
 
-![Execution Trend](screenshots/trend.png)
+## Execution Trend Chart
+
+![Trend Chart](screenshots/trend.png)
+
+---
 
 ## Test Results Table
 
@@ -37,24 +44,104 @@ Modern UI dashboard with summary cards
 
 # Tech Stack
 
-Frontend
+### Frontend
 - React
 - Chart.js
 - Socket.IO Client
+- Axios
 
-Backend
+### Backend
 - Node.js
 - Express
 - Socket.IO
 
-Testing
+### Testing
 - Playwright
 
-Deployment
+### Deployment
 - GitHub
-- Render (Backend)
-- Vercel / GitHub Pages (Frontend)
+- Render (Backend hosting)
+- Vercel / GitHub Pages (Frontend hosting)
 
 ---
 
-# Project Architecture
+# System Architecture
+# Cross-Browser Test Result Visualizer
+
+A modern **QA analytics dashboard** that visualizes Playwright cross-browser test results in real-time.
+
+This project combines **Playwright automation, Node.js backend, WebSockets, and a React dashboard** to provide a powerful test monitoring interface for developers and QA engineers.
+
+Users can run tests directly from the dashboard and instantly see analytics, browser comparisons, and execution trends.
+
+---
+
+# Features
+
+Real-time dashboard updates using WebSockets  
+Run Playwright tests directly from the UI  
+Cross-browser testing (Chromium, Firefox, WebKit)  
+Execution performance analytics  
+Visual charts and trend analysis  
+Summary cards for pass/fail statistics  
+Failure diagnostics with error logs  
+Screenshot preview for failed tests  
+Interactive filtering by browser and status  
+
+---
+
+# Dashboard Screenshots
+
+## Main Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Execution Trend Chart
+
+![Trend Chart](screenshots/trend.png)
+
+---
+
+## Test Results Table
+
+![Results Table](screenshots/results.png)
+
+---
+
+# Tech Stack
+
+### Frontend
+- React
+- Chart.js
+- Socket.IO Client
+- Axios
+
+### Backend
+- Node.js
+- Express
+- Socket.IO
+
+### Testing
+- Playwright
+
+### Deployment
+- GitHub
+- Render (Backend hosting)
+- Vercel / GitHub Pages (Frontend hosting)
+
+---
+
+# System Architecture
+User
+↓
+React Dashboard
+↓ WebSocket
+Node Backend (Express + Socket.IO)
+↓
+Playwright Tests
+↓
+results.json
+↓
+Dashboard updates in real time
